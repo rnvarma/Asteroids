@@ -1,0 +1,40 @@
+Rohan Varma_rnvarma_Section O
+
+Term Project Proposal: Mutliplayer Asteroids
+
+I intend to make multiplayer asteroids. Asteroids is a classic arcade game.
+My game will take most features from the original game while also
+implimenting special items and powerups to make gameplay more fun for 
+the user. The game itself will be built purely using Tkinter. The background
+music will be implimented used the pygames module.
+
+The game itself will essentially be both ships on a map where asteroids will
+spawn around them. The goal of the game is to survive as long as possible.
+Each round will be 3 minutes long. If either player dies, the round ends and
+the other player wins the round. If both players survive by the end of the 
+round, then the player with the most points will win the round. The rounds are
+going to carry on until one player loses all 3 lives. The player that does not lose
+all 3 lives will be awarded a survivor score of 3 points. The player to have
+the most points after one player loses all 3 lives is the winner of the game.
+
+Another game mode for my game will be co-op survivor mode where both players
+will cooperate to survive as long as possible. 
+
+The multiplayer implimentation is the main problem that I would like to solve.
+I will be using the socket module that comes stock with python. I will set up
+a server that will host up to 2 clients. When the second client connects to the server,
+the server will send an action to the clients to begin the game. The game state
+will be stored in the server. This will be where the locations of asteroids
+and shots and ships will be stored. The clients will constantly ask the server
+a set amount of times every second for the game state of the map. Every time
+a player makes a move to shoot or turn or move the ship, the client will send
+the action to the server and the server will update the information of the
+game state.
+
+In this way, both of the clients will continually be aware of the dynamic game
+state and be able to change the state themselves.
+
+Another feature that I would like to create is the ability to have a global
+high scores list. This would be acessible from any computer. This would
+be another text document that would keep track of the high scores and return
+them whenever the client calls for the high score list. 

@@ -1,0 +1,46 @@
+Rohan Varma_rnvarma_Section O
+
+Asteroids Competitive Analysis
+
+Asteroid original version released as an arcade game in 1979
+
+Anti features:
+- 3D asteroid graphics while game is still played on a 2D surface
+	- I might plan on implimenting some form of 3D graphics if I have time
+	  because it sounds like a fun undertaking, however 3D is not the main
+	  problem I would like to tackle
+- advanced graphics in the background- I am going to keep it simple
+
+Compelling Features:
+- basic functionality of the game with asteroids surrounding a ship and
+the ship having to shoot its way out of the mess
+- finit lives that you can lose when you die and can regain from items
+- Flying saucer bad guy ships that will come after certain times
+and attack you with bullets
+- Ship that will move as if it was in space. This means that the ship will 
+accelerate in a direction and keep going forward with that momentum.
+While the ship is heading in a direction, you can turn the direction the ship 
+is pointing in without actually changing the direction of the ship's trajectory.
+If you accelerate in a direction other than the current trajectory of
+the ship, then you begin to change trajectory into that angle. This seems
+like a hard feature to impliment because it requires creating a rudimentary
+physics engine
+- High Schore table
+- Different game modes:
+	- levels that increase difficulty as you go on
+	- a survival mode where you go as long as possible
+- Special items that allow you to get powerups during the game to reward
+you for making it a certain time or point total.
+- teleport button that you have a certain number of which will allow you to 
+randomly teleport to a part of the screen if you are in a tight spot. I 
+want to create a cool graphic for this feature.
+
+
+Missing features:
+- not a lot of the current programs have the idea of creating ships
+that have customizability. There are many cool games that give you points
+for your ingame performance and allow you to upgrade your ship using the 
+points that you earned. To impliment this, I plan to use a server
+to allow for users to create accounts and save their progress. In this way,
+the game will continue even after you close the screen and it will be a 
+lot more fun in my opinion.

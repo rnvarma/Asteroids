@@ -1,0 +1,76 @@
+*************************************************
+PROBLEM - BEING - SOLVED
+*************************************************
+
+The main problem that I am solving is how to create a 2 player multiplayer
+computer game that works over the internet. I have chosen to impliment Asteroids
+as a two player game. I spent about half my time creating the game and half
+my time implimenting the game in a multiplayer format using a server-client
+model.
+
+
+*************************************************
+MULTIPLAYER - DESIGN - OVERVIEW
+*************************************************
+
+Multiplayer Asterooids is going to be run through a server-client mechanism.
+I am holding all of the controllers and models on the server, while the
+clients impliment the view. The clients are going to constantly pull the
+gamestate from the server in order to keep an updated game view. Everytime
+a player presses a key, a command will be sent to the server to change
+the game state. Because the game state is then sent out to both clients,
+this change made by the user will be reflected on both player's screens.
+
+************************************************
+IMPORTANT - FUNCTIONS
+************************************************
+
+SERVER SIDE:
+- parseData(): 
+	Because the server and client can only communicate through strings,
+	a language of communication had to be developed to allow them to
+	send messages with multiple pieces of information to each other
+	in a sing string. My parseData function impliments a language in
+	the forme of "action.data". Action typically contains a command
+	from the client to "updateGame" or "moveLeft". The data typically
+	contains either "noData" or "player1"/"player2" when it is necessary
+	to specificy which client is sending the message
+
+- Asteroid.getGameStat():
+	The server needs a way to communicate the game state to the client.
+	I chose to do this by having the server send a dictionary to the
+	client that contained the values of all the variables needed to
+	project the game state onto the view. This gameState was sent as 
+	repr(gameState) in order to send a pure string. The client would
+	then take the string gameState and do eval(gameState) to reconstruct
+	the dictionary and access the information
+
+CLIENT SIDE:
+- Asteroid.contactServer():
+	this function handles all message sending from the client to the 
+	server. It establishes a connection to the server, sends the message,
+	waits on any data being sent back from the server, and then closes
+	the connection. This function is called constantly to get the gameState
+	and also called to send the server a command when the user presses
+	a button.
+
+************************************************
+USER - INTERFACE
+************************************************
+
+The user-interface is quite extensive throughout the application. 
+- I created an instructions page because many test-users requested a method
+of understanding how to play the game first before actually starting
+- I created a username function so that the users could identify who
+they were and also to make the game more personable
+- Based on my competitive analysis, I was able to recreate the way that 
+the ship is supposed to turn and move so that it is similar to the way
+that the original Asteroids games has it work.
+- I created a lobby before the game began so that the game would not begin
+until both players are ready to begin
+- I decided to make it so that either player would be able to also view
+the vitals of the other player. This was so that they have a better
+awareness of the situation and adjust their gameplay accordingly
+- I created a "back to main menu" button so that the players would be able
+to leave the lobby and either create a new username re-read the isntructions,
+or quite the game.

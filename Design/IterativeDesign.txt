@@ -1,0 +1,35 @@
+**********************************************
+IMPLIMENTED - FEEDBACK
+**********************************************
+Andrew ID of helper:JRTICK 
+- Increased sensitivity on turning
+- Turn while holding down the arrow key
+- Instruction screen
+- Fixed bug where player would randomly be unable to shoot bullets
+- Add more space between the two scores at the bottom
+- Prevent players from restarting the round in the middle of the round
+
+Andrew ID of helper:MPEYTON
+- Cap the acceleration and velocity of the ships
+- turn while holding down the arrow key (repeat suggestion)
+- Smoother turning
+
+Andrew ID of helper:RZD
+- Instruction screen
+- Fixed the lag problem
+- Allowed user to quite game by returning to main menu
+
+**********************************************
+UNIMPLIMENTED - FEEDBACK
+**********************************************
+
+- Move on key release instead of key press
+- make a single player option
+- make an invincibility cheat option
+- show usernames of the users on the game play screen
+- only show the information of the user on the screen, not the lives,score etc
+of the other user as well
+- ability to shoot bad guy bullets
+- more gradual acceleration
+- more precise wrap around
+- capital letter handling in the username creation screen

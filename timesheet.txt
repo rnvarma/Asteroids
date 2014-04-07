@@ -1,0 +1,11 @@
+***********************************************************
+TIMESHEET
+***********************************************************
+
+30+ hours coding actual game
+20+ hours coding client-server model
+1.5 hours spent doing competitive analysis and finding features
+2   hours spent storyboarding and discussing features with friends
+3   hours spent on iterative design with friends + in class
+
+56.5 hours total
